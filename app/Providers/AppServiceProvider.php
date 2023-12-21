@@ -19,6 +19,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // $this->registerPolicies();
+        // Gate::define('isAdmin', function($user) {
+        //    return $user->role == 'admin';
+        // });
+        // Gate::define('isEditor', function($user) {
+        //     return $user->role == 'manager';
+        // });
+        // Gate::define('isAuthor', function($user) {
+        //     return $user->role == 'user';
+        // });
+        // Gate::define('update-post', function ($user, $post) {
+        //     return $user->id === $post->user_id;
+        // });
     }
 }

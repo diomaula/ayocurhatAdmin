@@ -3,9 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable; // Perbaikan pada penggunaan kelas
+use Illuminate\Notifications\Notifiable;
 
-class admin_satgas extends Model
+class admin_satgas extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
+
+    protected $table = 'admin_satgas';
+    protected $primaryKey = 'id_admin';
+
+    protected $fillable = ['nama', 'email', 'password'];
 }

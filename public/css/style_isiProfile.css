@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(
+        to bottom,
+        #3baeda 0%,
+        #3baeda 40%,
+        #f4fbff 40%,
+        #f4fbff 100%
+    );
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+.container {
+    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+    position: relative;
+    overflow: hidden;
+    width: 1024px;
+    max-width: 100%;
+}
+.py-3 {
+    padding: 1.5rem 0;
+}
+
+.admin-button {
+    margin-right: 60px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #ffffff;
+}
+.card-header {
+    max-height: px;
+}
+.card-header h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #555151;
+}
+.foto-admin {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.judul h6 {
+    display: flex;
+    color: #000;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    padding-right: 30px;
+    white-space: nowrap; /* Tambahkan properti ini */
+}
+.button-simpan {
+    width: 90px;
+    height: 36px;
+}
+.form-label {
+    padding: 3px;
+    font-size: 16px;
+    color: #0b0b0b;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.foto-admin img {
+    width: 124.196px;
+    height: 120px;
+    flex-shrink: 0;
+}
+#kotak {
+    width: 440px;
+    height: 32px;
+}
+#dropdown {
+    width: 440px;
+    height: 35px;
+}
+.col-lg-4.offset-lg-1 {
+    margin-top: 112px; /* Sesuaikan nilai margin-top sesuai kebutuhan Anda */
+}
+.button-simpan {
+    margin-top: 48px;
+    margin-bottom: 15px;
+}

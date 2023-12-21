@@ -101,6 +101,15 @@ body {
   margin-right: 20px;
 }
 
+.DataAdmin {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.DataAdmin img {
+  margin-right: 20px;
+}
+
 .search-box {
   background: #efefef;
   width: 250px;
