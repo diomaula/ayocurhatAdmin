@@ -13,5 +13,5 @@ class admin_satgas extends Authenticatable
     protected $table = 'admin_satgas';
     protected $primaryKey = 'id_admin';
 
-    protected $fillable = ['nama', 'email', 'password'];
+    protected $fillable = ['nama', 'email', 'password', 'jenis_kelamin', 'alamat', 'nomorhp'];
 }

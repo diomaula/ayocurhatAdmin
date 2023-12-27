@@ -13,7 +13,7 @@ class DaminController extends Controller
     public function index()
     {
         
-        $damins = admin_satgas::latest()->paginate(5);
+        $damins = admin_satgas::latest()->paginate(7);
         return view('damins.index',compact('damins'))
                     ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -57,16 +57,33 @@ class DaminController extends Controller
     }
 
     public function update(Request $request, $nama)
-    {
-        $request->validate([
-            'nama' => 'required|max:50',
-        ]);
+{
+    $request->validate([
+        // Lakukan validasi sesuai kebutuhan
+        'nama' => 'required|max:100',
+        'nomorhp' => 'required|max:20',
+        'alamat' => 'required|max:100',
+        'jenis_kelamin' => 'required|in:Laki-Laki,Wanita',
+        // ...
+    ]);
 
-        dio::where('nama', $nama)->update($request->only('nama'));
+    // Lakukan pembaruan pada data berdasarkan nama
+    $admin_satgas = admin_satgas::where('nama', $nama)->first();
+    if ($admin_satgas) {
+        $admin_satgas->nama = $request->input('nama');
+        $admin_satgas->nomorhp = $request->input('nomorhp');
+        $admin_satgas->alamat = $request->input('alamat');
+        $admin_satgas->jenis_kelamin = $request->input('jenis_kelamin');
+        // ...
+        $admin_satgas->save();
 
         return redirect()->route('damins.index')
             ->with('success', 'Data berhasil diperbarui.');
     }
+
+}
+
+
 
     public function destroy($nama)
     {

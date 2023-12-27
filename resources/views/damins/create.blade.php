@@ -1,21 +1,17 @@
-@extends('layouts.layout')
-  
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
 
-{{-- @include('damins.component.nav') --}}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Tambah Admin</title>
+    <link rel="stylesheet" href="{{ asset('css/style_addAdmin.css') }}"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
 
-
-    <div class="row mt-4">
-        <div class="col-lg-12 mt-4">
-            <div class="pull-left">
-                <h2>Tambah Data</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('damins.index') }}"> Back</a>
-            </div>
-        </div>
-    </div>
-   
+<body>
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -26,34 +22,35 @@
             </ul>
         </div>
     @endif
-   
+    
     <form action="{{ route('damins.store') }}" method="POST">
         @csrf
-    
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Nama</strong>
-                    <input type="text" name="nama" class="form-control" placeholder="nama">
+     <div class="container d-flex align-items-center justify-content-center">
+         <div class="card">
+             <div class="card-header">
+                Add New User
+                </div>
+             <div class="card-body d-flex align-items-center justify-content-center">
+                 <div class="input-form">
+
+                    <label for="Nama Lengkap" class="form-label">Nama Lengkap</label>
+                    <input type="text" name="nama" class="form-control" id="kotak2" placeholder="">
+
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="text" name="email" class="form-control" id="kotak2" placeholder="">
+
+                    <label for="Password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="kotak2" placeholder="">
+
+                    </div>
+                </div>
+             <div class="button-save text-end">
+                <button type="submit" style="color: #fff" class="btn btn-info">Simpan</button>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Email</strong>
-                    <input type="text" name="email" class="form-control" placeholder="email">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Password</strong>
-                    <input type="text" name="password" class="form-control" placeholder="password">
-                </div>
-            </div>
-            
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div> 
+        </div>
     </form>
 
-@endsection
+</body>
+
+</html>

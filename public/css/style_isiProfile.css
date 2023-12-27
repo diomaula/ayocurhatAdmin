@@ -16,11 +16,11 @@ body {
     font-size: 10px;
 }
 .container {
-    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
     position: relative;
     overflow: hidden;
     width: 1024px;
     max-width: 100%;
+    border-radius: 10px;
 }
 .py-3 {
     padding: 1.5rem 0;
@@ -35,10 +35,9 @@ body {
     flex-direction: column;
     padding: 5px;
     background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.card-header {
-    max-height: px;
-}
+
 .card-header h3 {
     font-size: 16px;
     font-weight: 400;
@@ -46,7 +45,7 @@ body {
     color: #555151;
 }
 .foto-admin {
-    padding: 10px;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +78,7 @@ body {
 }
 #kotak {
     width: 440px;
-    height: 32px;
+    height: 35px;
 }
 #dropdown {
     width: 440px;
@@ -91,4 +90,5 @@ body {
 .button-simpan {
     margin-top: 48px;
     margin-bottom: 15px;
+    margin-left: 25px;
 }

@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(
+        to bottom,
+        #3baeda 0%,
+        #3baeda 30%,
+        #f4fbff 30%,
+        #f4fbff 100%
+    );
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    height: 100vh;
+}
+.container {
+    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+    position: relative;
+    overflow: hidden;
+    width: 1024px;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--font-second, #a8a9aa);
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 94px;
+}
+
+.card {
+    width: 1024px;
+    height: 522px;
+    flex-shrink: 0;
+}
+.card-header {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #0b0b0b;
+}
+.form-label {
+    padding: 3px;
+    font-size: 16px;
+    color: #0b0b0b;
+    font-weight: 400;
+    line-height: 32px;
+}
+#kotak2 {
+    width: 440px;
+    height: 35px;
+}
+
+.input-form {
+    align-items: center;
+    margin-top: 22px;
+}
+.button-save {
+    margin-bottom: 120px;
+    margin-right: 285px;
+    margin-top: 54px;
+}

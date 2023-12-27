@@ -24,9 +24,9 @@ Route::get('/', function () {
 });
 
 Route::resource('damins', DaminController::class);
-Route::get('damins/{kode}/edit', 'DaminController@edit')->name('damins.edit');
-Route::put('damins/{kode}', 'DaminController@update')->name('damins.update');
-Route::delete('damins/{kode}', 'DaminController@destroy')->name('damins.destroy');
+Route::get('damins/{nama}/edit', 'DaminController@edit')->name('damins.edit');
+Route::put('damins/{nama}', 'DaminController@update')->name('damins.update');
+Route::delete('damins/{nama}', 'DaminController@destroy')->name('damins.destroy');
 Route::POST('/store_admin', [DaminController::class, 'store']);
 // Route::get('/damins.create', [DaminController::class, 'create'])->name('damins.create');
 
